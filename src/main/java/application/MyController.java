@@ -11,7 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
+
 
 
 public class MyController implements Initializable {
@@ -70,7 +70,10 @@ public class MyController implements Initializable {
 		sizes(doneButton);
 		sizes(startButton);
 		
-		doneButton.setTextFill(Color.DARKVIOLET);
+		startButton.setStyle("-fx-text-fill: purple");
+		doneButton.setStyle("-fx-text-fill: red");
+		deleteOrderButton.setStyle("-fx-text-fill: CORNFLOWERBLUE");
+		
 	}
 
 
