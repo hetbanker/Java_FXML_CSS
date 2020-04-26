@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" styleClass="vbox" fx:controller = "application.MyController"
+			fx:id = "root">
+	<!-- TODO Add Nodes -->
+	
+	<Button fx:id = "startButton" text = "START ORDERING" onAction = "#startMethod"/>
+	<Button fx:id = "extraShotButton" text = "extra shot $1.20" onAction = "#extraShotMethod"/>
+	<Button fx:id = "creamButton" text = "cream $0.50" onAction = "#creamMethod"/>
+	<Button fx:id = "sugarButton" text = "sugar $0.50" onAction = "#sugarMethod"/>
+	<Button fx:id = "mochaButton" text = "mocha swirl $1.20" onAction = "#mochaSwirlMethod"/>
+	<Button fx:id = "caramelButton" text = "caramel swirl $1.00" onAction = "#caramelSwirlMethod"/>
+	<Button fx:id = "doneButton" text = "DONE ORDERING" onAction = "#doneMethod"/>
+	<Button fx:id = "newOrderButton" text = "New Order" onAction = "#newOrderMethod"/>
+	<Button fx:id = "deleteOrderButton" text = "Delete Order" onAction = "#deleteOrderMethod"/>
+	
+</VBox>
+
