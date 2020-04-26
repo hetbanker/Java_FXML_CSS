@@ -5,7 +5,7 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml/1" styleClass="vbox" fx:controller = "application.MyController"
 			fx:id = "root">
-	<!-- TODO Add Nodes -->
+	<!-- TODO Add Nodes --> 
 	
 	<Button fx:id = "startButton" text = "START ORDERING" onAction = "#startMethod"/>
 	<Button fx:id = "extraShotButton" text = "extra shot $1.20" onAction = "#extraShotMethod"/>

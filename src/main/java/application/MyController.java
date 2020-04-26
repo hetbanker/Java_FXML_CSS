@@ -13,7 +13,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 
-
 public class MyController implements Initializable {
 	
 	@FXML
@@ -49,7 +48,6 @@ public class MyController implements Initializable {
 	@FXML
 	private Button startButton;
 	
-	
     //static so each instance of controller can access to update 
 	ArrayList<Double> totalPrice = new ArrayList<Double>();
 	Double blackCoffee = 3.99;
@@ -73,7 +71,6 @@ public class MyController implements Initializable {
 		startButton.setStyle("-fx-text-fill: purple");
 		doneButton.setStyle("-fx-text-fill: red");
 		deleteOrderButton.setStyle("-fx-text-fill: CORNFLOWERBLUE");
-		
 	}
 
 
@@ -81,14 +78,10 @@ public class MyController implements Initializable {
 	public void startMethod(ActionEvent e) throws IOException 
 	{	
 		buttonDiabler(false);
-		
 		newOrderButton.setDisable(true);
 		doneButton.setDisable(false);
 		startButton.setDisable(true);
 		deleteOrderButton.setDisable(false);
-		
-		
-		
 		System.out.println("Welcome to starbucks \n\nBlack coffee: $" + blackCoffee);
 		System.out.println("   Add your toppings:");
 		totalPrice.add(3.99);
@@ -172,6 +165,7 @@ public class MyController implements Initializable {
 		newOrderButton.setDisable(true);	 
 	} 
 	
+	//method to delete the order
 	public void deleteOrderMethod(ActionEvent e) throws IOException 
 	{
 		buttonDiabler(false);
@@ -183,7 +177,7 @@ public class MyController implements Initializable {
 		newOrderButton.setDisable(false);
 	} 
 	
-	
+	//diasbles all the button
 	public void buttonDiabler(Boolean bool) 
 	{
 		doneButton.setDisable(bool);	
