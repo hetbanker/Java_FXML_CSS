@@ -51,7 +51,6 @@ public class MyController implements Initializable {
 	
 
 	
-	
     //static so each instance of controller can access to update 
 	ArrayList<Double> totalPrice = new ArrayList<Double>();
 	Double blackCoffee = 3.99;
@@ -59,47 +58,27 @@ public class MyController implements Initializable {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) 
-	{
-		
-		startButton.setTranslateX(100);
-		startButton.setTranslateY(100);
-		startButton.setTextFill(Color.BLACK);
-		
-		 
-		doneButton.setDisable(true);
-		doneButton.setTranslateX(100);
-		doneButton.setTranslateY(100);
-		
-		extraShotButton.setDisable(true);
-		extraShotButton.setTranslateX(100);
-		extraShotButton.setTranslateY(100);
-		
-		creamButton.setDisable(true);
-		creamButton.setTranslateX(100);
-		creamButton.setTranslateY(100);
-		
-		sugarButton.setDisable(true);
-		sugarButton.setTranslateX(100);
-		sugarButton.setTranslateY(100);
-		
-		caramelButton.setDisable(true);
-		caramelButton.setTranslateX(100);
-		caramelButton.setTranslateY(100);
-		
-		mochaButton.setDisable(true);
-		mochaButton.setTranslateX(100);
-		mochaButton.setTranslateY(100);
-		
+	{		
 		newOrderButton.setDisable(true);
-		newOrderButton.setTranslateX(100);
-		newOrderButton.setTranslateY(100);
-		
 		deleteOrderButton.setDisable(true);
-		deleteOrderButton.setTranslateX(100);
-		deleteOrderButton.setTranslateY(100);
-
+		buttonDiabler(true);	
+		sizes(deleteOrderButton);
+		sizes(newOrderButton);
+		sizes(mochaButton);
+		sizes(caramelButton);
+		sizes(sugarButton);
+		sizes(creamButton);
+		sizes(extraShotButton);
+		sizes(doneButton);
+		sizes(startButton);
 	}
 
+	 
+	void sizes (Button button)
+	{
+		button.setTranslateX(100);
+		button.setTranslateY(100);
+	}
 	
 	//method to add shots
 	public void startMethod(ActionEvent e) throws IOException 
@@ -111,6 +90,7 @@ public class MyController implements Initializable {
 		startButton.setDisable(true);
 		deleteOrderButton.setDisable(false);
 		
+		doneButton.setTextFill(Color.DARKVIOLET);
 		
 		System.out.println("Welcome to starbucks \n\nBlack coffee: $" + blackCoffee);
 		System.out.println("   Add your toppings:");
@@ -163,7 +143,6 @@ public class MyController implements Initializable {
 	{
 		Double sumDouble = 0.0;
 		
-		
 		for(Double totalPriceDouble : totalPrice)
 		{
 			sumDouble += totalPriceDouble;  
@@ -176,8 +155,7 @@ public class MyController implements Initializable {
 		
 		buttonDiabler(true);
 		newOrderButton.setDisable(false);
-		deleteOrderButton.setDisable(true);
-		
+		deleteOrderButton.setDisable(true);	
 	}
 	
 	public void newOrderMethod(ActionEvent e) throws IOException 
@@ -188,22 +166,17 @@ public class MyController implements Initializable {
 		System.out.println("\nNEW ORDER \nBlack coffee: $" + blackCoffee);
 		System.out.println("   Add your toppings:");
 		totalPrice.add(3.99);
-		newOrderButton.setDisable(true);
-	
-		 
+		newOrderButton.setDisable(true);	 
 	} 
 	
 	public void deleteOrderMethod(ActionEvent e) throws IOException 
 	{
 		buttonDiabler(false);
 		System.out.println("\nDeleting order...");
-		
-		
 		totalPrice.clear();
 		System.out.println("\nNEW ORDER \nBlack coffee: $" + blackCoffee);
 		System.out.println("   Add your toppings:");
-		totalPrice.add(3.99);
-		 
+		totalPrice.add(3.99);	 
 	} 
 	
 	
